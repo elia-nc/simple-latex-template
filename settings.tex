@@ -1,0 +1,76 @@
+% Questo file contiene tutte le info sui pacchetti utilizzati, le impostazioni base del documento, della sua geometria e la formattazione di titoli, header e footer
+
+%----------------------------------------------------------------------------------------
+%	PACCHETTI
+%----------------------------------------------------------------------------------------
+% Pacchetti necessari per il template
+\usepackage[utf8]{}             % Input encoding
+\usepackage{graphicx}           % Per le immagini
+\usepackage{amsmath}            % Per equazioni e simboli mateamtici
+\usepackage{amssymb}            % Altri simboli matematici
+\usepackage{geometry}           % Per cambiare geometria
+\usepackage[colorlinks=false]{hyperref}  % Hyperlinks non colorati (solo rettangolo)
+\usepackage{fancyhdr}           % Per modificare header e footer
+\usepackage{setspace}           % Line spacing
+\usepackage{titlesec}           % Formattazione sezioni e capitoli
+\usepackage{longtable}          % Per tabelle che possono splittarsi tra due pagine
+\usepackage{float}              % Per posizionare le tabelle nel punto dove si vuole con [H]
+\usepackage[absolute,overlay]{textpos} % Per posizionamento assoluto (immagine bg title page)
+\usepackage{transparent}        % Per abilitare la trasparenza
+\usepackage{fontspec}           % Per cambiare il font principale -> va usato LuaLaTex compiler
+\usepackage{appendix}           % Per inserire le appendici
+\usepackage{etoolbox}           % Per rimuovere indentazione dopo figure e tabelle
+
+%----------------------------------------------------------------------------------------
+%	IMPOSTAZIONI DOCUMENTO 
+%----------------------------------------------------------------------------------------
+% Impostazioni lingua
+\usepackage[italian]{babel}
+
+% Selezione del font --> LuaLaTex compiler (commentare per usare altro compiler)
+\setmainfont{Georgia}  % Font per il corpo del testo
+
+% Dimensioni di pagina e margini
+\geometry{top=2cm, bottom=2cm, left=3cm, right=3cm}
+\onehalfspacing % Line spacing settata a 1.5
+
+\setcounter{secnumdepth}{3}  % Serve a numerare anche le subsubsection
+\setcounter{tocdepth}{2}     % Serve a non mettere le subsubsection nell'indice
+
+% Per levare l'indentazione del testo dopo immagini e tabelle (se non si va a capo)
+\AfterEndEnvironment{table}{\noindent}
+\AfterEndEnvironment{figure}{\noindent}
+
+%----------------------------------------------------------------------------------------
+%	HEADER E FOOTER
+%----------------------------------------------------------------------------------------
+% Per prevenire la trasformazione automatica del testo di header e footer in uppercase
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}} % Per i capitoli
+\renewcommand{\sectionmark}[1]{\markright{\ #1}} % Per le sezioni
+% Si definisce le altezze minime dell'header per evitare errori
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+
+% Per cambiare header e footer delle pagine normali
+\pagestyle{fancy}
+\fancyhf{}   
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyfoot[C]{\thepage}
+
+% Decommentare per cambiare header e footer delle pagine capitolo e dell'indice (plain style)
+% \fancypagestyle{plain}{%
+% \fancyhead{}
+% \fancyfoot{}
+% \fancyhead[R]{\thepage}
+% }
+
+%----------------------------------------------------------------------------------------
+%	FORMATTAZIONE TITOLI SEZIONI E CAPITOLI
+%----------------------------------------------------------------------------------------
+% Decommentare per rimuovere la scritta "capitolo n" prima del capitolo
+% \titleformat{\chapter}[hang]{\bfseries\Huge}{\thechapter.}{2pc}{}
+
+% Formattazione scritte sezione e sottosezione
+\titleformat{\section}[hang]{\bfseries\Large}{\thesection}{1pc}{}
+\titleformat{\subsection}[hang]{\bfseries\large}{\thesubsection}{1pc}{}

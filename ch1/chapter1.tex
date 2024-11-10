@@ -1,0 +1,33 @@
+% Chapter 1
+% 
+\chapter{Dummy Figures} % Main chapter title
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+
+%-------------------------------------------------------------------------------
+
+\section{Single and multiple images for figure}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+
+% single image
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=5cm]{img/logo_unifi.png} % or use 0.5\textwidth 
+    \caption{Example of single figure}
+\end{figure}
+
+% multiple images
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/dummy.jpg}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/dummy.jpg}
+    \end{minipage} % aggiungendo minipage si va a capo
+    \caption{Example of multiple image in figure (one row)} %unica caption per più immagini
+\end{figure}

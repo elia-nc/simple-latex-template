@@ -1,0 +1,106 @@
+% Chapter 2
+
+\chapter{Dummy Tables}
+
+Suggestion: use \href{https://www.tablesgenerator.com/}{Latex Table Generator} in order to make tables, you can paste even tables from excel!
+
+%-------------------------------------------------------------------------------
+
+\section{Normal Tables}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+                      & 1        & 2        \\ \hline
+$J_i$ [$m^4$]         & 0.003573 & 0.001302 \\
+$B_i$ [$kN\cdot m$]   & 111653   & 40690    \\ 
+$\alpha_i$ [$m^{-1}$] & 0.8040   & 0.9514  \\ \hline
+\end{tabular}
+
+\caption{Semplice tabella di esempio}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|r}
+
+Item & Quantity \\ \hline
+Widgets & 42 \\
+Gadgets & 13 \\ \hline
+
+\end{tabular}
+\caption{\label{tab:widgets}Altra tabella di esempio con label}
+\end{table}
+
+%-------------------------------------------------------------------------------
+
+\section{Long Tables}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu\footnote{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.}.
+
+\textbf{Usare una Long Table permette di far dividere la tabella tra una pagina e l'altra proprio come di seguito.
+}
+\begin{longtable}{c|cccc|ccc}
+\centering
+
+% prima riga tab (parametri) solo all'inizio della tabella
+\textbf{z} & \textbf{limo} & \textbf{sabbia} & \textbf{marna} & \textbf{ghaia} & \textbf{V1} & \textbf{V2} & \textbf{V3} \\
+\hline
+\endfirsthead
+
+% prima riga tab (parametri) dopo ogni "split"
+\textbf{z} & \textbf{limo} & \textbf{sabbia} & \textbf{marna} & \textbf{ghaia} & \textbf{V1} & \textbf{V2} & \textbf{V3} \\
+\hline
+\endhead   
+
+% scritta a fine tabella
+\hline
+\multicolumn{8}{c}{} \\ % una riga tutta bianca
+\caption{Esempio di Long Table}\\
+\endlastfoot % Indica la fine della tabella
+
+0  & 193  & 89     & 354   & 150   & 150 & 89  & 193 \\
+1  & 193  & 89     & 354   & 150   & 150 & 89  & 193 \\
+1  & 193  & 89     & 354   & 150   & 150 & 89  & 193 \\
+2  & 193  & 89     & 354   & 150   & 150 & 89  & 193 \\
+2  & 459  & 381    & 354   & 150   & 150 & 381 & 459 \\
+3  & 459  & 381    & 354   & 150   & 150 & 381 & 459 \\
+3  & 372  & 600    & 354   & 150   & 600 & 600 & 372 \\
+4  & 372  & 600    & 354   & 150   & 600 & 600 & 372 \\
+4  & 354  & 427    & 354   & 150   & 427 & 427 & 354 \\
+5  & 354  & 427    & 354   & 150   & 427 & 427 & 354 \\
+5  & 354  & 364    & 451   & 150   & 354 & 354 & 354 \\
+6  & 354  & 364    & 451   & 150   & 354 & 354 & 354 \\
+6  & 354  & 452    & 628   & 150   & 354 & 354 & 452 \\
+7  & 354  & 452    & 628   & 150   & 354 & 354 & 452 \\
+7  & 354  & 452    & 577   & 150   & 354 & 354 & 452 \\
+8  & 354  & 452    & 577   & 150   & 354 & 354 & 452 \\
+8  & 354  & 452    & 586   & 150   & 354 & 354 & 452 \\
+9  & 354  & 452    & 586   & 150   & 354 & 354 & 452 \\
+9  & 354  & 452    & 682   & 150   & 452 & 452 & 452 \\
+10 & 354  & 452    & 682   & 150   & 452 & 452 & 452 \\
+10 & 354  & 452    & 776   & 150   & 452 & 452 & 452 \\
+11 & 354  & 452    & 776   & 150   & 452 & 452 & 452 \\
+11 & 354  & 452    & 785   & 150   & 452 & 452 & 354 \\
+12 & 354  & 452    & 785   & 150   & 452 & 452 & 354 \\
+12 & 354  & 452    & 662   & 150   & 662 & 354 & 354 \\
+13 & 354  & 452    & 662   & 150   & 662 & 354 & 354 \\
+13 & 354  & 452    & 674   & 150   & 674 & 354 & 354 \\
+14 & 354  & 452    & 674   & 150   & 674 & 354 & 354 \\
+14 & 354  & 452    & 719   & 150   & 719 & 354 & 354 \\
+15 & 354  & 452    & 719   & 150   & 719 & 354 & 354 \\
+15 & 354  & 452    & 354   & 150   & 354 & 354 & 452 \\
+16 & 354  & 452    & 354   & 150   & 354 & 354 & 452 \\
+16 & 354  & 452    & 354   & 150   & 354 & 354 & 452 \\
+17 & 354  & 452    & 354   & 150   & 354 & 354 & 452 \\
+17 & 354  & 452    & 354   & 150   & 354 & 354 & 452 \\
+18 & 354  & 452    & 354   & 150   & 354 & 354 & 452 \\
+18 & 354  & 452    & 354   & 150   & 354 & 354 & 354 \\
+19 & 354  & 452    & 354   & 150   & 354 & 354 & 354 \\
+19 & 354  & 452    & 354   & 150   & 354 & 354 & 354 \\
+20 & 354  & 452    & 354   & 150   & 354 & 354 & 354 \\
+20 & 354  & 452    & 354   & 150   & 354 & 354 & 354
+
+\end{longtable}

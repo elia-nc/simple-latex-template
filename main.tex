@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% UNIFI Report
+% LaTeX Template
+% Version 0.1 (OTT 2024)
+%
+% This template works with 
+% LuaLaTex compiler
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 11pt]{report}  % Cambiare qui la grandezza del font di base
+
+% Il file settings.tex contiene info sui pacchetti e la formattazione generale 
+\input{settings}
+
+% Aggiungi QUI sotto ulteriori pacchetti
+% Prima consulta settings.tex per vedere se non è già stato inserito
+% \usepackage{pdfpages} % Per inserire pdf esterni scalandoli
+
+
+%----------------------------------------------------------------------------------------
+%	INIZIO DEL DOCUMENTO
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% Frontmatter (pagina titolo + abstract + indici + simboli)
+% Per modifiche consultare il file frontamatter.tex
+\input{frontmatter}
+
+%----------------------------------------------------------------------------------------
+%	CORPO DEL DOCUMENTO
+%----------------------------------------------------------------------------------------
+% Include i capitoli del report separati nelle cartelle per una migliore gestione
+\input{ch1/chapter1}
+\input{ch2/chapter2}
+\input{ch3/chapter3}
+%\input{ch4/chapter4}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+% consultare il file bibliografia.bib per aggiungere risorse
+\newpage
+% Aggiunge la bibliografia all'indice
+\addcontentsline{toc}{chapter}{Bibliografia}
+% Si seleziona il metodo usato per le citazioni e l'ordine in cui mostrarle nella pagina
+\bibliographystyle{ieeetr} 
+% Si aggunge quindi la pagina bibliografia 
+% Commentare in assenza di citazioni (da un errore parziale se vuota)
+\bibliography{bibliografia}
+
+%----------------------------------------------------------------------------------------
+%	APPENDICI
+%----------------------------------------------------------------------------------------
+% Include le appendici del report come cartelle separate
+\begin{appendices}
+
+% Decommenta solo se usi le appendici
+\input{appendices/appendixA}
+%\input{appendices/appendixB}
+
+\end{appendices}
+
+%----------------------------------------------------------------------------------------
+%	FINE DEL DOCUMENTO
+%----------------------------------------------------------------------------------------
+\end{document}

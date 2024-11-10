@@ -1,0 +1,45 @@
+% Chapter 3
+
+\chapter{Dummy Equations} % Main chapter title
+
+%----------------------------------------------------------------------------------------
+
+\section{Single equation}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu \cite{ref1}.
+
+\textbf{Ci sono più modi di inserire un'equazione in latex, tra i più usati:}
+\begin{itemize}
+    \item Equation
+        \begin{equation}
+            w_i (x) = C_i \cdot e^{-\alpha_i x}\cdot \sin{(\alpha_i x + \psi_i)} + \frac{\gamma\cdot (h-x)}{4\cdot \alpha_i^4 \cdot B_i}
+            \label{eq:prima_equazione}
+        \end{equation}
+    \item Gather
+        \begin{gather}
+            D = 0.33\cdot \left[ 0.586\cdot \left( \frac{G}{G_0} \right) ^2 - 1.547 \cdot \frac{G}{G_0} + 1 \right]
+        \end{gather}
+\end{itemize}
+Se si usa "*" si evita la numerazione dell'equazione, di seguito un esempio con un sistema:
+\begin{gather*}
+Y = m\cdot X + q:\ 
+    \begin{cases}
+        m = 2.2941 \Rightarrow R = m = 2.2941 \\
+        q = 2.1000 \Rightarrow C = 10^q = 125.9050
+    \end{cases}
+\end{gather*}
+
+Senza la numerazione risulta più difficile riferisi all'equazione, quindi non metterla solo se sei sicuro di non volerti riferire a quell'espressione in futuro. Per esempio se voglio citare la prima equazione del documento userò: equazione \eqref{eq:prima_equazione}.
+
+%-------------------------------------------------------------------------------
+
+\section{Equations on multiple rows}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim \cite{ref2}.
+
+\textbf{Se si vogliono più equazioni una dopo l'altra si può sempre usare Gather (ma non Equation).}
+\begin{gather*}
+    C_1 = -\sqrt{2\alpha_1 ^2 h^2 - 2 \alpha_1 h + 1} \cdot \frac{\gamma}{4 \alpha_1^5 B_1} = -0.001014\\
+    \psi_1 = \arctan{\left( \frac{\alpha_1 h}{\alpha_1 h - 1} \right)} = 0.8318 
+\end{gather*}
+

@@ -1,0 +1,90 @@
+% Questo file contiene la composizione del frontmatter composto da title page + abstract + indici + simboli
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+    % Contenuto centrato per logo e titolo
+    \begin{center}
+        \vspace{1cm}
+        \includegraphics[width=7cm]{img/logo_unifi.png} \\[4cm] % Logo
+        
+        {\huge \textbf{Titolo}}\\[0.5cm]
+        
+        {\Large Sottotitolo}\\[1cm]
+        
+        {\large Corso di laurea magistrale in Ingegneria Civile}\\[0.5cm]
+        {\large Nome del corso}\\
+    \end{center}
+
+    \vfill
+
+    % Contenuto allineato a sx per info studenti e docenti/revisori
+    \begin{flushleft}
+        \textbf{Studente/i:} nome cognome 1, nome cognome 2 \\ 
+        \textbf{Docente/i:} Prof. Ing. nome cognome\\ 
+        \textbf{Revisore/i:} Prof. Ing. nome cognome \\[4cm]
+    \end{flushleft}
+
+    \vfill
+
+    \begin{center}
+	    \today % Per mostrare la data di compilazione
+	\end{center}
+
+    % Immagine di bg in basso a dx --> Da commentare se non usata
+    \begin{textblock}{2}(8.8, 10)  % Adattare (x, y) per variare posizione
+        \includegraphics[width=14cm]{img/logo_unifi_bg.png}
+    \end{textblock}
+\end{titlepage}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+% Commenta la sezione se non vuoi usare l'abstract
+\begin{abstract}
+
+Your abstract.
+
+\end{abstract}
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	INDICI
+%----------------------------------------------------------------------------------------
+\pagestyle{plain}     % Plain style per tutte le pagine indice
+\pagenumbering{Roman} % Numerazione romana (i, ii, iii, iv...) per le pagine indice
+
+% Indice
+\tableofcontents
+\newpage
+
+% Indice figure
+\listoffigures
+\newpage
+
+% Indice tabelle
+\listoftables
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	SIMBOLI
+%----------------------------------------------------------------------------------------
+
+% Lista dei simboli
+\chapter*{Simboli}  % L'asterisco serve a non numerare il capitolo
+
+\begin{longtable}{lll} % Long table per i simboli
+
+%Symbol & Name & [Unit] \\
+$\gamma_M$ & Peso di volume & $\left[ \frac{kN}{m^3} \right]$ \\
+$G$ & Modulo elastico di taglio &  \\
+$G_0$ & Modulo elastico di taglio iniziale &  \\
+
+\end{longtable}
+
+\newpage
+\pagestyle{fancy}      % Riapplica header e footer da qui in poi
+\pagenumbering{arabic} % Numerazione pagine normale (1,2,3...)
