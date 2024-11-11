@@ -1,3 +1,7 @@
+% UNIFI Report
+% LaTeX Template
+% Version 0.2 (NOV 2024)
+
 # simple-latex-template
 Si tratta di un template molto basilare per relazioni di progetti universitari basato sul template "report" integrato in latex adattato alle esigenze, in particolare è stato adoperato per report dell'Università degli Studi di Firenze.
 
